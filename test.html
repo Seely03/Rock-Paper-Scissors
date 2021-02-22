@@ -37,54 +37,51 @@ let myArray = [
     computerSelection = computerPlay();
     if ((computerSelection == "rock") && (playerSelection == "paper")){
       playerScore=++playerScore;
-      return {
-           "Congratulations, your paper wraps the computer's rock, you win!":
-           computerScore,
-           playerScore};
+      return "Congratulations, your paper wraps the computer's rock, you win!"
 }
      
     else if ((computerSelection == "paper") && (playerSelection == "scissors")){
       playerScore=++playerScore;
-      return {
-           "Congratulations, your scissors cut the computer's paper, you win!":
-           computerScore,
-           playerScore};
+      return "Congratulations, your scissors cut the computer's paper, you win!"
     }
     else if ((computerSelection == "scissors") && (playerSelection == "rock")){
       playerScore=++playerScore;
-      return {
-           "Congratulations, your rock bashes the computer's scissors, you win!":
-           computerScore,
-           playerScore};
+      return "Congratulations, your rock bashes the computer's scissors, you win!"
     }
     else if ((computerSelection == "rock") && (playerSelection == "scissors")){
       computerScore=++computerScore;   
-      return { 
-     "Unlucky, the computer's rock bashes your scissors, better luck next time!":
-      computerScore,
-      playerScore};
+      return "Unlucky, the computer's rock bashes your scissors, better luck next time!"
     }
     else if ((computerSelection == "paper") && (playerSelection == "rock")){
       computerScore=++computerScore; 
-      return {
-           "Unlucky, the computer's paper wraps your rock, better luck next time!":
-           computerScore,
-           playerScore};
+      return "Unlucky, the computer's paper wraps your rock, better luck next time!"
     }
     else if ((computerSelection == "scissors") && (playerSelection == "paper")){
       computerScore=++computerScore; 
-      return {
-           "Unlucky, the computer's scissors cut your paper, better luck next time":
-           computerScore,
-           playerScore};
+      return "Unlucky, the computer's scissors cut your paper, better luck next time"
+           
     }
     else{
-         return {
-          "Close one, that was a tie!":
-          "computerScore: " + computerScore,
-          playerScore };
+         return "Close one, that was a tie!"
+         
     }
 }
+// Function that runs the play round function whilst both playerScore and computerScore are < 3 turning it iinto a Bo5 match.
+function game () {
+       while (computerScore<3 && playerScore<3){
+        console.log(playRound());
+        console.log("Your score is " + playerScore);
+        console.log("The computer's score is " + computerScore);
+       }
+    
+   if (playerScore==3) {
+     console.log("Congratulations, you won the match.");
+   } 
+   else if (computerScore==3){
+     console.log ("You lost the match, better luck next time");
+   }
+  }
+
   </script>
   </body>
   </html>
