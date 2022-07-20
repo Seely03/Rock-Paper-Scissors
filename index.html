@@ -1,1 +1,44 @@
-
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<button class="btn-darkmode">🌙</button>
+		<h1 class="center-class">Rock Paper Scissors</h1>
+		<h2 class="center-class" id="subtitle">Man vs Machine</h2>
+		<div class="center-class" id="select">
+			<h3>First to</h3>
+			<select name="maxScore" id="maxScore">
+				<option value="3">3</option>
+				<option value="5">5</option>
+				<option value="7">7</option>
+			</select>
+		</div>
+		<div class="center-class" id="resetDiv">
+			<button id="reset">Reset</button>
+		</div>
+		<div class="selections center-class">
+			<button class="selection" id="rock" aria-label="rock">👊</button>
+			<button class="selection" id="paper" aria-label="paper">✋</button>
+			<button class="selection" id="scissors" aria-label="scissors">
+				✌️
+			</button>
+		</div>
+		<div class="results">
+			<div>
+				You:
+				<span class="score" id="playerScore">0</span>
+			</div>
+			<div id="final">
+				Computer:
+				<span class="score" id="computerScore">0</span>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
